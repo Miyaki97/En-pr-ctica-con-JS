@@ -82,3 +82,26 @@ boton5.addEventListener("click", () => {
 boton6.addEventListener("click", () => {
    caja.style.backgroundColor = "#d53f8c"
 })
+
+
+//Ejercicio tres
+
+const sumar = document.getElementById("btn-sumar")
+        const restar = document.getElementById("btn-restar")
+        const input1 = document.getElementById("valor1")
+        const input2 = document.getElementById("valor2")
+        let resultadosuma = 0
+        let resultadoresta = 0
+        const resultado = document.getElementById("resultado")
+        sumar.addEventListener("click",()=>{
+            resultadosuma = Number(input1.value) + Number(input2.value)
+            resultado.textContent = resultadosuma
+        })
+        restar.addEventListener("click",()=>{
+            if(Number(input1.value) > Number(input2.value)) {
+                resultadoresta = Number(input1.value) - Number(input2.value)
+            } else {
+                resultadoresta = 0
+            }
+            resultado.textContent = resultadoresta
+        })
